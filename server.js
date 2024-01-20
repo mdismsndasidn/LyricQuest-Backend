@@ -6,10 +6,10 @@ const getSong = require("./lib/getSong");
 const app = express();
 require('dotenv').config();
 const port = 3000;
-// const cors = require("cors");
+const cors = require("cors");
 const searchSong = require("./lib/searchSong");
 const getSongById = require('./lib/getSongById')
-// app.use(cors());
+app.use(cors());
 
 app.use(bodyParser.json());
 
